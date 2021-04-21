@@ -46,7 +46,7 @@ class RecorderController: UIViewController {
                     //self.view.frame = CGRect(x: 0, y: self.view.frame.height, width: self.view.bounds.width, height: -300)
                     //self.view.layoutIfNeeded()
                 }, completion: nil)
-                //self.checkPermissionAndRecord()
+                self.checkPermissionAndRecord()
             } else {
                // audioView.isHidden = true
                 UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
@@ -56,7 +56,7 @@ class RecorderController: UIViewController {
                     //self.view.frame = defaultFrame
                     //self.view.layoutIfNeeded()
                 }, completion: nil)
-                //self.stopRecording()
+                self.stopRecording()
             }
         }
     
