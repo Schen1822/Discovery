@@ -48,7 +48,7 @@ class RecorderController: UIViewController {
                 }, completion: nil)
                 self.checkPermissionAndRecord()
             } else {
-               // audioView.isHidden = true
+                audioView.isHidden = true
                 UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
                     //self.handleView.alpha = 0
                     //self.timeLabel.alpha = 0
@@ -57,8 +57,29 @@ class RecorderController: UIViewController {
                     //self.view.layoutIfNeeded()
                 }, completion: nil)
                 self.stopRecording()
+                //navigationController?.pushViewController(LoadingScreen(), animated: true)
+//                let loadingScreen = self.storyboard?.instantiateViewController(withIdentifier: "LoadingViewController")
+//                self.navigationController?.pushViewController(loadingScreen!, animated: true)
+                empathize()
             }
         }
+    
+    private func empathize() {
+        let loadingVC = LoadingViewController()
+
+        // Animate loadingVC over the existing views on screen
+        loadingVC.modalPresentationStyle = .overCurrentContext
+
+        // Animate loadingVC with a fade in animation
+        loadingVC.modalTransitionStyle = .crossDissolve
+               
+        present(loadingVC, animated: true, completion: nil)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+            self.dismiss(animated: false, completion: nil)// Change `2.0` to the desired number of seconds.
+            let resultsScreen = self.storyboard?.instantiateViewController(withIdentifier: "ResultsScreen")
+            self.navigationController?.pushViewController(resultsScreen!, animated: true)
+        }
+    }
     
     private func format() -> AVAudioFormat? {
             let format = AVAudioFormat(settings: self.settings)
@@ -70,6 +91,7 @@ class RecorderController: UIViewController {
             let currentFileName = "recording-\(format.string(from: Date()))" + ".wav"
             let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
             let url = documentsDirectory.appendingPathComponent(currentFileName)
+            print(url)
             return url
         }
     private func createAudioRecordFile() -> AVAudioFile? {
@@ -143,8 +165,10 @@ class RecorderController: UIViewController {
                 
                 let write = true
                 if write {
+                    //print("Writing")
                     if self.audioFile == nil {
                         self.audioFile = self.createAudioRecordFile()
+                        print("Created")
                     }
                     if let f = self.audioFile {
                         do {
@@ -249,7 +273,22 @@ class RecorderController: UIViewController {
         //prompt.adjustsFontSizeToFitWidth = true
         prompt.lineBreakMode = NSLineBreakMode.byCharWrapping
     }
-    
+    fileprivate func setupTimeLabel() {
+        view.addSubview(timeLabel)
+        timeLabel.translatesAutoresizingMaskIntoConstraints = false
+        timeLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        timeLabel.bottomAnchor.constraint(equalTo: recordButton.topAnchor, constant: -16).isActive = true
+        timeLabel.text = "00.00"
+        timeLabel.textColor = .gray
+        timeLabel.alpha = 0
+    }
+    fileprivate func setupAudioView() {
+        audioView.frame = CGRect(x: 0, y: 500, width: view.frame.width, height: 135)
+        view.addSubview(audioView)
+        //TODO: Add autolayout constraints
+        audioView.alpha = 0
+        audioView.isHidden = true
+    }
     fileprivate func initPage() {
         initPrompt()
         setupRecordingButton()
@@ -258,6 +297,9 @@ class RecorderController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initPage()
+        //setupHandelView()
+        setupTimeLabel()
+        setupAudioView()
         // Do any additional setup after loading the view.
     }
 

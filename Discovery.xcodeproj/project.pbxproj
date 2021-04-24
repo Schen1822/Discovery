@@ -15,6 +15,8 @@
 		AD09384D2623F67300A9512C /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD09384C2623F67300A9512C /* HomeController.swift */; };
 		AD71A3B126296A2000196B5A /* AudioVisualizerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD71A3B026296A2000196B5A /* AudioVisualizerView.swift */; };
 		AD71A3B426296A7D00196B5A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD71A3B326296A7D00196B5A /* Extensions.swift */; };
+		AD7F35AE2634C7D40055B0F2 /* LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7F35AD2634C7D40055B0F2 /* LoadingScreen.swift */; };
+		AD7F35B12634C9B00055B0F2 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7F35B02634C9B00055B0F2 /* ResultsViewController.swift */; };
 		ADF01EA92622BE7500C9826F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF01EA82622BE7500C9826F /* AppDelegate.swift */; };
 		ADF01EAB2622BE7500C9826F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF01EAA2622BE7500C9826F /* SceneDelegate.swift */; };
 		ADF01EAD2622BE7500C9826F /* RecorderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF01EAC2622BE7500C9826F /* RecorderController.swift */; };
@@ -37,6 +39,8 @@
 		AD09384C2623F67300A9512C /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		AD71A3B026296A2000196B5A /* AudioVisualizerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioVisualizerView.swift; sourceTree = "<group>"; };
 		AD71A3B326296A7D00196B5A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		AD7F35AD2634C7D40055B0F2 /* LoadingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreen.swift; sourceTree = "<group>"; };
+		AD7F35B02634C9B00055B0F2 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		ADF01EA52622BE7500C9826F /* Discovery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Discovery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADF01EA82622BE7500C9826F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADF01EAA2622BE7500C9826F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +118,8 @@
 				ADF01EB12622BE7700C9826F /* Assets.xcassets */,
 				ADF01EB32622BE7700C9826F /* LaunchScreen.storyboard */,
 				ADF01EB62622BE7700C9826F /* Info.plist */,
+				AD7F35AD2634C7D40055B0F2 /* LoadingScreen.swift */,
+				AD7F35B02634C9B00055B0F2 /* ResultsViewController.swift */,
 			);
 			path = Discovery;
 			sourceTree = "<group>";
@@ -237,11 +243,13 @@
 				AD0938362623B94400A9512C /* RecordButton.swift in Sources */,
 				ADF01EAD2622BE7500C9826F /* RecorderController.swift in Sources */,
 				AD71A3B126296A2000196B5A /* AudioVisualizerView.swift in Sources */,
+				AD7F35B12634C9B00055B0F2 /* ResultsViewController.swift in Sources */,
 				AD71A3B426296A7D00196B5A /* Extensions.swift in Sources */,
 				AD09384D2623F67300A9512C /* HomeController.swift in Sources */,
 				AD0938392623B94C00A9512C /* RecordButtonKit.swift in Sources */,
 				ADF01EA92622BE7500C9826F /* AppDelegate.swift in Sources */,
 				ADF01EAB2622BE7500C9826F /* SceneDelegate.swift in Sources */,
+				AD7F35AE2634C7D40055B0F2 /* LoadingScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

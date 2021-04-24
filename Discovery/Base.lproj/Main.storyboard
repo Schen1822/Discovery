@@ -34,10 +34,34 @@
             </objects>
             <point key="canvasLocation" x="848" y="106"/>
         </scene>
-        <!--View Controller-->
+        <!--Loading Screen-->
+        <scene sceneID="sms-Uj-wyy">
+            <objects>
+                <viewController storyboardIdentifier="LoadingViewController" title="Loading Screen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WOc-5b-aZc" customClass="LoadingScreen" customModule="Discovery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rMN-AZ-AHW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loading Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8V-7U-c8H">
+                                <rect key="frame" x="148" y="365" width="119" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6WG-88-GkC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ot-wl-0yE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1108" y="743"/>
+        </scene>
+        <!--Results View Controller-->
         <scene sceneID="o2o-Bc-QiT">
             <objects>
-                <viewController id="6XB-Fp-N7G" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResultsScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6XB-Fp-N7G" customClass="ResultsViewController" customModule="Discovery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DA1-3f-tCv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -335,7 +359,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="zLE-Xg-W09"/>
+        <segue reference="jVD-hA-FHo"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Home" width="1280" height="720"/>

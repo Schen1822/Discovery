@@ -13,7 +13,6 @@ import AVFoundation
 @IBDesignable
 class RecordButton: UIButton {
     
-    
     private weak var tweenOperation : PRTweenOperation?
     private var startPlayer : AVAudioPlayer?
     private var stopPlayer : AVAudioPlayer?
