@@ -18,9 +18,9 @@ public class RecordButtonKit : NSObject {
     //// Cache
 
     private struct Cache {
-        static let recordButtonColor: UIColor = UIColor(red: 0.000, green: 0.000, blue: 1.000, alpha: 1.000)
+        static let recordButtonColor: UIColor = UIColor(red: 0.580, green: 0.792, blue: 1.000, alpha: 1.000)
         static let recordButtonHighlightedColor: UIColor = RecordButtonKit.recordButtonColor.withBrightness(0.3)
-        static let recordFrameColor: UIColor = UIColor(red: 0.000, green: 0.000, blue: 1.000, alpha: 1.000)
+        static let recordFrameColor: UIColor = UIColor(red: 0.580, green: 0.792, blue: 1.000, alpha: 1.000)
         static let recordButtonNormalColor: UIColor = RecordButtonKit.recordButtonColor
     }
 

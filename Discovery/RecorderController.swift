@@ -264,14 +264,15 @@ class RecorderController: UIViewController {
     }
     
     fileprivate func initPrompt() {
-        view.addSubview(prompt)
         prompt.text = "Tell us how you are feeling :)"
         prompt.textAlignment = .center
-        
+        prompt.font = UIFont(name:"AvenirNext-Medium", size: 25.0)
         prompt.frame = CGRect(x: 100, y: 200, width: self.view.bounds.width,height:200)
         prompt.center.x = self.view.center.x
+        prompt.textColor = UIColor(red:132/255, green:155/255, blue:170/255, alpha: 1.000)
         //prompt.adjustsFontSizeToFitWidth = true
         prompt.lineBreakMode = NSLineBreakMode.byCharWrapping
+        view.addSubview(prompt)
     }
     fileprivate func setupTimeLabel() {
         view.addSubview(timeLabel)
